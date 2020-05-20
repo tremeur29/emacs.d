@@ -1,0 +1,2 @@
+* emacs config
+now in its own repository so I can attempt to use it on windows as well as linux
