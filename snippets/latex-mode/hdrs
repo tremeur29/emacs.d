@@ -1,0 +1,13 @@
+# name: latex-headers
+# key: hdrs
+# --
+\documentclass{article}
+
+\input{$HOME/Documents/drive/res/latex-headers-templates/headers/standard}
+% \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup}
+
+\begin{document}
+
+$0
+
+\end{document}

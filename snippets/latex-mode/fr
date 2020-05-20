@@ -1,0 +1,7 @@
+# name: frame
+# key: fr
+# --
+\begin{frame}
+  \frametitle{$1}
+  $0
+\end{frame}

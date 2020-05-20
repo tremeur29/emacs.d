@@ -1,0 +1,8 @@
+# name: border-box
+# key: bbox
+# --
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+$0

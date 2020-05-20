@@ -1,0 +1,6 @@
+# name: insert-time
+# key: time
+# type: command
+# binding: C-x t
+# --
+(insert (format-time-string "%H:%M"))

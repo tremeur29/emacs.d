@@ -1,0 +1,6 @@
+# name: shebang
+# key: !
+# --
+#!/usr/bin/env bash
+
+$0
