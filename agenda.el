@@ -5,6 +5,7 @@
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-agenda-skip-deadline-if-done t)
 (setq org-agenda-skip-timestamp-if-done t)
+(setq org-agenda-breadcrumbs-separator " ▸ ") ; requires org 9.3
 (setq calendar-day-name-array ["de Sul" "de Lun" "de Meurth" "de Mergher"
 			       "de Yow" "de Gwener" "de Sadorn"])
 (setq calendar-day-abbrev-array ["Su" "L" "Mth" "Mr" "Y" "G" "Sa"])
