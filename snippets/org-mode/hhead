@@ -1,0 +1,10 @@
+# name: html-head
+# key: hhead
+# --
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="`(expand-file-name "~/.emacs.d/export.css")`" />
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One|Raleway:400,400i,800|Share+Tech+Mono" />
+#+INFOJS_OPT: view:showall toc:nil ltoc:nil
+#+OPTIONS: num:nil
+#+TITLE: $1
+
+$0

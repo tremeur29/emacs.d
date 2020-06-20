@@ -1,0 +1,24 @@
+# name: latex-metropolis
+# key: metro
+# --
+\documentclass{beamer}
+
+\usetheme[numbering=fraction,progressbar=foot]{metropolis}
+\usefonttheme{professionalfonts}
+\usepackage{mathspec}
+\setsansfont[BoldFont={Fira Sans},
+Numbers={OldStyle}]{Fira Sans Light}
+\setmathsfont(Digits)[Numbers={Lining, Proportional}]{Fira Sans Light}
+\metroset{block=fill}
+
+\title{$1}
+\author{$2}
+\date{$3}
+
+\begin{document}
+
+\frame{\titlepage}
+
+$0
+
+\end{document}
