@@ -36,6 +36,11 @@
   (string-equal system-type "windows-nt")
   )
 
+(defun ismac ()
+  "Return true if on macos"
+  (string-equal system-type "darwin")
+  )
+
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
@@ -314,6 +319,9 @@
   :config
   (when (islin)
   (when (not (member "all-the-icons" (font-family-list)))
+    (all-the-icons-install-fonts t)))
+  (when (ismac)
+  (when (not (member "all-the-icons" (font-family-list)))
     (all-the-icons-install-fonts t)))) ; need to install fonts manually on windows
 
 (use-package emojify
@@ -354,6 +362,12 @@
 (setq initial-major-mode 'org-mode)
 
 (when (islin)
+(setq initial-scratch-message "\
+# ｏｔｔａ  ｎｅｉ  ｇｅｎ  ｅｍａｃｓ
+
+"))
+
+(when (ismac)
 (setq initial-scratch-message "\
 # ｏｔｔａ  ｎｅｉ  ｇｅｎ  ｅｍａｃｓ
 
