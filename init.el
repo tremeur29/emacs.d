@@ -65,6 +65,10 @@
       browse-url-generic-program "chromium-browser"
       ))
 
+(when (ismac)
+  (setq ns-alternate-modifier 'meta)
+  (setq ns-right-alternate-modifier 'none))
+
 ;; Be quiet
 
 (setq ad-redefinition-action 'accept)
