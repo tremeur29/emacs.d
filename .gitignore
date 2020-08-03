@@ -4,4 +4,6 @@ elpa/*
 emojis/*
 recentf
 url/*
-
+.org-id-locations
+bookmarks
+persist/*
