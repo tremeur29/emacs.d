@@ -257,7 +257,10 @@
 (load-file "~/.emacs.d/capture.el") ; capture templates stored here
 (setq org-capture-bookmark nil)
 
-(use-package org-drill)
+(use-package org-drill
+  :config
+  (setq org-id-locations-file "~/Documents/drive/org/.org-id-locations")
+  (setq persist--directory-location "~/Documents/drive/org/persist"))
 
 (setq org-todo-keywords
       '((sequence "TODO" "|" "DONE" "CANCELLED")))

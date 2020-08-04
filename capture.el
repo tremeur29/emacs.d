@@ -11,7 +11,7 @@
 *** English
 %^{Word 1 (English)}
 *** Type
-%^{Word 1 type||masculine|feminine|plural|preterite}
+%^{Word 1 type||masculine|feminine|plural|preterite|collective}
 ** 2                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -21,7 +21,7 @@
 *** English
 %^{Word 2 (English)}
 *** Type
-%^{Word 2 type||masculine|feminine|plural|preterite}
+%^{Word 2 type||masculine|feminine|plural|preterite|collective}
 ** 3                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -31,7 +31,7 @@
 *** English
 %^{Word 3 (English)}
 *** Type
-%^{Word 3 type||masculine|feminine|plural|preterite}
+%^{Word 3 type||masculine|feminine|plural|preterite|collective}
 ** 4                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -41,7 +41,7 @@
 *** English
 %^{Word 4 (English)}
 *** Type
-%^{Word 4 type||masculine|feminine|plural|preterite}
+%^{Word 4 type||masculine|feminine|plural|preterite|collective}
 ** 5                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -51,7 +51,7 @@
 *** English
 %^{Word 5 (English)}
 *** Type
-%^{Word 5 type||masculine|feminine|plural|preterite}
+%^{Word 5 type||masculine|feminine|plural|preterite|collective}
 ** 6                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -61,7 +61,7 @@
 *** English
 %^{Word 6 (English)}
 *** Type
-%^{Word 6 type||masculine|feminine|plural|preterite}
+%^{Word 6 type||masculine|feminine|plural|preterite|collective}
 ** 7                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -71,7 +71,7 @@
 *** English
 %^{Word 7 (English)}
 *** Type
-%^{Word 7 type||masculine|feminine|plural|preterite}
+%^{Word 7 type||masculine|feminine|plural|preterite|collective}
 ** 8                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -81,7 +81,7 @@
 *** English
 %^{Word 8 (English)}
 *** Type
-%^{Word 8 type||masculine|feminine|plural|preterite}
+%^{Word 8 type||masculine|feminine|plural|preterite|collective}
 ** 9                                                                 :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -91,7 +91,7 @@
 *** English
 %^{Word 9 (English)}
 *** Type
-%^{Word 9 type||masculine|feminine|plural|preterite}
+%^{Word 9 type||masculine|feminine|plural|preterite|collective}
 ** 10                                                                :drill:
 :PROPERTIES:
 :DRILL_CARD_TYPE: twosided
@@ -101,4 +101,4 @@
 *** English
 %^{Word 10 (English)}
 *** Type
-%^{Word 10 type||masculine|feminine|plural|preterite}")))
+%^{Word 10 type||masculine|feminine|plural|preterite|collective}")))
