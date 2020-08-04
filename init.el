@@ -2,8 +2,8 @@
 
 (setq user-mail-address "eheu48@gmail.com")
 (setq user-full-name "Trémeur Karahés")
-(setq calendar-latitude 54.58)
-(setq calendar-longitude -5.95)
+(setq calendar-latitude 54.59)
+(setq calendar-longitude -5.83)
 (setq calendar-location-name "Belfast")
 
 ;; MELPA/use-package
@@ -227,6 +227,9 @@
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-special-ctrl-a/e t)
 
+(load-file "~/.emacs.d/agenda-common.el")
+;; for agenda things used in both emacs and batch
+
 (use-package calfw
   ;; grid calendar that i forget to use
     :bind ("C-c f" . cfw:open-org-calendar)
@@ -234,14 +237,7 @@
     (use-package calfw-org)
     (setq cfw:org-overwrite-default-keybinding t
           cfw:display-calendar-holidays nil
-          calendar-week-start-day 1
-	  calendar-day-name-array ["de Sul" "de Lun" "de Meurth" "de Mergher"
-				   "de Yow" "de Gwener" "de Sadorn"]
-          calendar-day-abbrev-array ["Su" "L" "Mth" "Mr" "Y" "G" "Sa"]
-          calendar-month-name-array ["mis Genver" "mis Whevrel" "mis Meur’"
-				     "mis Ebrel" "mis Me" "mis Efen"
-				     "mis Gorefen" "mis Est" "mis Gwyngala"
-				     "mis Hedra" "mis Du" "mis Kevardhu"]))
+          calendar-week-start-day 1))
 
 (use-package org-agenda-property)
 ;; lets properties inherit
@@ -258,112 +254,13 @@
   (org-ellipsis " ⤵")
   :hook (org-mode . org-bullets-mode))
 
-(setq org-capture-templates
-	     '(("c" "LCLB" entry
-	       (file "~/Documents/drive/org/lclb.org")
-	       "* %^t
-** 1                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 1 (Cornish)}
-*** English
-%^{Word 1 (English)}
-*** Type
-%^{Word 1 type||masculine|feminine|plural|preterite}
-** 2                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 2 (Cornish)}
-*** English
-%^{Word 2 (English)}
-*** Type
-%^{Word 2 type||masculine|feminine|plural|preterite}
-** 3                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 3 (Cornish)}
-*** English
-%^{Word 3 (English)}
-*** Type
-%^{Word 3 type||masculine|feminine|plural|preterite}
-** 4                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 4 (Cornish)}
-*** English
-%^{Word 4 (English)}
-*** Type
-%^{Word 4 type||masculine|feminine|plural|preterite}
-** 5                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 5 (Cornish)}
-*** English
-%^{Word 5 (English)}
-*** Type
-%^{Word 5 type||masculine|feminine|plural|preterite}
-** 6                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 6 (Cornish)}
-*** English
-%^{Word 6 (English)}
-*** Type
-%^{Word 6 type||masculine|feminine|plural|preterite}
-** 7                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 7 (Cornish)}
-*** English
-%^{Word 7 (English)}
-*** Type
-%^{Word 7 type||masculine|feminine|plural|preterite}
-** 8                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 8 (Cornish)}
-*** English
-%^{Word 8 (English)}
-*** Type
-%^{Word 8 type||masculine|feminine|plural|preterite}
-** 9                                                                 :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 9 (Cornish)}
-*** English
-%^{Word 9 (English)}
-*** Type
-%^{Word 9 type||masculine|feminine|plural|preterite}
-** 10                                                                :drill:
-:PROPERTIES:
-:DRILL_CARD_TYPE: twosided
-:END:
-*** Cornish
-%^{Word 10 (Cornish)}
-*** English
-%^{Word 10 (English)}
-*** Type
-%^{Word 10 type||masculine|feminine|plural|preterite}")))
+(load-file "~/.emacs.d/capture.el") ; capture templates stored here
+(setq org-capture-bookmark nil)
 
 (use-package org-drill)
+
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE" "CANCELLED")))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 
@@ -376,13 +273,8 @@
 	(tags . "%-2c%b")
 	(agenda . "%-2c %?-12t%-35b%?-12s")))
 (setq org-use-property-inheritance (quote ("LOCATION")))
-(setq org-agenda-breadcrumbs-separator " ▸ ") ; requires org 9.3
-(setq org-agenda-skip-scheduled-if-done t)
-(setq org-agenda-skip-deadline-if-done t)
-(setq org-agenda-skip-timestamp-if-done t)
 (setq org-agenda-todo-ignore-scheduled t)
 (setq org-agenda-todo-ignore-deadlines t)
-(setq org-agenda-show-current-time-in-grid nil)
 
 ;; Elfeed
 
