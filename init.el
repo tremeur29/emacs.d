@@ -272,9 +272,9 @@
 (setq org-agenda-files (list "~/Documents/drive/org/calendar"
 			      "~/Documents/drive/org/period.org"))
 (setq org-agenda-prefix-format
-      '((todo . "%-2c%b")
-	(tags . "%-2c%b")
-	(agenda . "%-2c %?-12t%-35b%?-12s")))
+      '((todo . "%-2c %b")
+	(tags . "%-2c %b")
+	(agenda . "%-2c %?-12t%?-12s")))
 (setq org-use-property-inheritance (quote ("LOCATION")))
 (setq org-agenda-todo-ignore-scheduled t)
 (setq org-agenda-todo-ignore-deadlines t)
