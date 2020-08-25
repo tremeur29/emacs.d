@@ -142,7 +142,10 @@
   (recentf-mode 1)
   (setq recentf-max-menu-items 20)
   (setq recentf-max-saved-items 20)
-  (global-set-key "\C-x\ \C-r" 'recentf-open-files))
+  (global-set-key "\C-x\ \C-r" 'recentf-open-files)
+  (add-to-list 'recentf-exclude
+             (concat user-emacs-directory
+                     (convert-standard-filename "elpa/"))))
 
 (use-package reftex
   ;; easier latex references
