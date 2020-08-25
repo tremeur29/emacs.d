@@ -6,6 +6,13 @@
 (setq calendar-longitude -5.83)
 (setq calendar-location-name "Belfast")
 
+;; it's not 1986
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-language-environment 'utf-8)
+(set-selection-coding-system 'utf-8)
+
 ;; MELPA/use-package
 
 (package-initialize)
