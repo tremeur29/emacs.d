@@ -1,0 +1,6 @@
+# name: interleave-file
+# key: int
+# --
+#+INTERLEAVE_PDF: `(file-name-base)`.pdf
+
+$0
