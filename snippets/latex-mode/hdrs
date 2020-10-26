@@ -3,8 +3,8 @@
 # --
 \documentclass{article}
 
-\input{$HOME/Documents/drive/res/latex-headers-templates/headers/standard}
-% \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup}
+\input{$HOME/Documents/drive/res/latex-headers-templates/headers/standard} %$
+% \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup} %$
 
 \begin{document}
 
