@@ -1,0 +1,4 @@
+# name: graphics-height
+# key: grh
+# --
+\includegraphics[height=0.9\textheight]{$0}

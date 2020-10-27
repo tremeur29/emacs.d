@@ -1,0 +1,6 @@
+# name: frame-notitle
+# key: frnt
+# --
+\begin{frame}
+  $0
+\end{frame}

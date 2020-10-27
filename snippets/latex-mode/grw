@@ -1,0 +1,4 @@
+# name: graphics-width
+# key: grw
+# --
+\includegraphics[width=\textwidth]{$0}
