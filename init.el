@@ -76,6 +76,9 @@
   (setq ns-alternate-modifier 'meta)
   (setq ns-right-alternate-modifier 'none))
 
+(when (iswin)
+  (setq default-directory "~/"))
+
 ;; Be quiet
 
 (setq ad-redefinition-action 'accept)
