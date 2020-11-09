@@ -362,6 +362,9 @@
 (set-face-attribute 'region nil :background "#fcf6a7")
 (set-face-background 'hl-line "#c9ffbf")
 
+(unless (islin)
+  (load-theme 'dichromacy))
+
 ;; Fonts
 
 (custom-set-faces
