@@ -13,6 +13,10 @@
 (set-language-environment 'utf-8)
 (set-selection-coding-system 'utf-8)
 
+;; sonic arts
+(setq ring-bell-function 'ignore)
+(setq visible-bell t)
+
 ;; MELPA/use-package
 
 (package-initialize)
@@ -267,7 +271,8 @@
   (org-ellipsis " ⤵")
   :hook (org-mode . org-bullets-mode))
 
-(load-file "~/.emacs.d/capture.el") ; capture templates stored here
+(global-set-key [f2] 'org-capture)
+(load-file "~/Documents/drive/org/capture.el") ; capture templates stored here
 (setq org-capture-bookmark nil)
 
 (use-package org-drill
