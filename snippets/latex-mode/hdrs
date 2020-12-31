@@ -6,6 +6,8 @@
 \input{$HOME/Documents/drive/res/latex-headers-templates/headers/standard} %$
 % \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup} %$
 
+% \bibliography{bib} % change if necessary
+
 \begin{document}
 
 $0
