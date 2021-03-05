@@ -336,6 +336,10 @@
   (elfeed-sort-order 'ascending)
   (elfeed-db-directory "~/Documents/drive/org/elfeed"))
 
+(add-hook 'elfeed-new-entry-hook
+          (elfeed-make-tagger :before "6 months ago"
+                              :remove 'unread))
+
 ;; Aesthetics
 
 (use-package all-the-icons
