@@ -1,0 +1,6 @@
+# name: centre
+# key: cent
+# --
+\begin{center}
+$0
+\end{center}
