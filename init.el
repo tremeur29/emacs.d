@@ -244,6 +244,11 @@
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-special-ctrl-a/e t)
 
+(setq org-display-inline-images t)
+(setq org-redisplay-inline-images t)
+(setq org-startup-with-inline-images "inlineimages")
+(setq org-image-actual-width '(300))
+
 (load-file "~/.emacs.d/agenda-common.el")
 ;; for agenda things used in both emacs and batch
 
