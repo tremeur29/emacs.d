@@ -1,0 +1,82 @@
+# name: latex-bibsetup
+# key: latexbib
+# --
+\usepackage[style=authoryear-ibid,alldates=long,giveninits=true,dashed=false,labeldate=year,mergedate=maximum,maxbibnames=10,ibidpage=true,uniquename=false]{biblatex}
+
+\renewbibmacro*{volume+number+eid}{ % puts issue number in brackets
+  \printfield{volume}
+  \printfield{number}
+  \setunit{\addcomma\space}
+  \printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+\renewbibmacro{in:}{ % gets rid of In for journal articles
+  \ifentrytype{article}
+    {}
+    {\printtext{\bibstring{in}\intitlepunct}}}
+
+\DefineBibliographyStrings{english}{ % changes visited on to accessed
+urlseen={Accessed},
+}
+
+\DeclareFieldFormat[article]{pages}{#1} % gets rid of pp. for journal articles
+\DeclareNameAlias{sortname}{family-given} % stops 2nd author being listed first last
+\renewcommand*{\intitlepunct}{\space} % deletes colon after In
+\AtEveryBibitem{\uspunctuation} % fixes full stop placement
+
+\renewcommand*{\postnotedelim}{\addcolon} % replaces p. in text with colons
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+\DeclareFieldFormat{origdate}{\mkbibbrackets{#1}} % year first published
+\renewbibmacro*{cite:labeldate+extradate}{%
+  \iffieldundef{origyear}
+    {}
+    {\printorigdate
+     \setunit{\addspace}}%
+  \iffieldundef{labelyear}
+    {}
+    {\printtext[bibhyperref]{\printlabeldateextra}}}
+
+\DeclareCiteCommand{\citeorigyear}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\printfield{origyear}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\renewbibmacro*{date+extradate}{%
+  \iffieldundef{origyear}
+    {}
+    {\printorigdate
+     \setunit{\addspace}}%
+  \iffieldundef{labelyear}
+    {}
+    {\printtext[parens]{%
+       \iflabeldateisdate
+         {\printdateextra}
+         {\printlabeldateextra}}}}
+
+\renewbibmacro*{begentry}{% % adds short author in square brackets where applicable
+    \ifnameundef{shortauthor}
+        {}
+        {\bibopenbracket\printnames{shortauthor}%
+         \bibclosebracket\space}}
+
+\DefineBibliographyExtras{english}{% % D M Y format in bibliography
+    \protected\def\mkbibdatelong#1#2#3{%
+    \iffieldundef{#3}
+      {}
+      {\stripzeros{\thefield{#3}}%
+       \iffieldundef{#2}{}{\nobreakspace}}%
+    \iffieldundef{#2}
+      {}
+      {\mkbibmonth{\thefield{#2}}%
+       \iffieldundef{#1}{}{\space}}%
+    \stripzeros{\thefield{#1}}}%
+}
+
+\bibliography{bib} % change if necessary
+
+$0

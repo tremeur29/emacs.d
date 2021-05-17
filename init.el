@@ -14,6 +14,7 @@
 (set-selection-coding-system 'utf-8)
 
 ;; sonic arts
+
 (setq ring-bell-function 'ignore)
 (setq visible-bell t)
 
@@ -161,14 +162,6 @@
              (concat user-emacs-directory
                      (convert-standard-filename "elpa/"))))
 
-(use-package reftex
-  ;; easier latex references
-  :init
-  (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-  (setq reftex-plug-into-AUCTeX t)
-  :config  
-  (setq reftex-default-bibliography '("~/Documents/drive/res/readings/fullbib.bib"))) ; won't work currently on windows, not syncing this file
-
 (use-package typo
   ;; smart quotes
   :custom
@@ -183,9 +176,6 @@
 (yas-global-mode 1)
 
 ;; Major modes
-
-(use-package 2048-game)
-;; play the top game of 2014
 
 (use-package interleave)
 ;; for annotating pdfs in an org file
@@ -275,15 +265,6 @@
   (org-bullets-bullet-list '("✸"))
   (org-ellipsis " ⤵")
   :hook (org-mode . org-bullets-mode))
-
-(global-set-key [f2] 'org-capture)
-(load-file "~/Documents/drive/org/capture.el") ; capture templates stored here
-(setq org-capture-bookmark nil)
-
-(use-package org-drill
-  :config
-  (setq org-id-locations-file "~/Documents/drive/org/.org-id-locations")
-  (setq persist--directory-location "~/Documents/drive/org/persist"))
 
 (setq org-todo-keywords
       '((sequence "TODO" "|" "DONE" "CANCELLED")))

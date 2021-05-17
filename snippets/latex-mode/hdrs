@@ -3,10 +3,72 @@
 # --
 \documentclass{article}
 
-\input{$HOME/Documents/drive/res/latex-headers-templates/headers/standard} %$
-% \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup} %$
+% Dimensions
+\usepackage{geometry}
+\geometry{a4paper}
 
-% \bibliography{bib} % change if necessary
+% Text spacing
+\usepackage{microtype}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\emergencystretch 3em
+\usepackage{setspace}
+\doublespacing
+\usepackage[bottom]{footmisc}
+
+% Tables
+\usepackage{float}
+\usepackage{tablefootnote}
+\usepackage{makecell}
+\renewcommand{\cellalign}{cl}
+\usepackage{etoolbox}
+\AtBeginEnvironment{tabular}{\doublespacing}
+\usepackage{array}
+\usepackage{booktabs}
+
+% Links and URLs
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{tt}
+
+% Fonts
+\usepackage{mathspec}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont(Digits){TeX Gyre Pagella Math}
+\setmathfont(Latin,Greek){TeX Gyre Pagella}
+\newfontfamily\ipatext{Doulos SIL}
+\DeclareTextFontCommand{\phontrans}{\ipatext} % wrap // and [] in \phontrans
+
+% Typographic tweaks
+\usepackage{csquotes}
+\makeatletter
+     \DeclareMathSymbol{0}{\mathalpha}{\eu@DigitsArabic@symfont}{`0}
+     \DeclareMathSymbol{1}{\mathalpha}{\eu@DigitsArabic@symfont}{`1}
+     \DeclareMathSymbol{2}{\mathalpha}{\eu@DigitsArabic@symfont}{`2}
+     \DeclareMathSymbol{3}{\mathalpha}{\eu@DigitsArabic@symfont}{`3}
+     \DeclareMathSymbol{4}{\mathalpha}{\eu@DigitsArabic@symfont}{`4}
+     \DeclareMathSymbol{5}{\mathalpha}{\eu@DigitsArabic@symfont}{`5}
+     \DeclareMathSymbol{6}{\mathalpha}{\eu@DigitsArabic@symfont}{`6}
+     \DeclareMathSymbol{7}{\mathalpha}{\eu@DigitsArabic@symfont}{`7}
+     \DeclareMathSymbol{8}{\mathalpha}{\eu@DigitsArabic@symfont}{`8}
+     \DeclareMathSymbol{9}{\mathalpha}{\eu@DigitsArabic@symfont}{`9}
+\makeatother
+
+% Language
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=british]{english}
+\setotherlanguages{french} % for some reason this displays footnotes correctly?
+
+% Other
+\usepackage{paralist}
+\usepackage{verbatim}
+
+% uncomment and expand this if there's a bibliography:
+% latexbib
+
+\title{}
+\author{}
+\date{}
 
 \begin{document}
 
