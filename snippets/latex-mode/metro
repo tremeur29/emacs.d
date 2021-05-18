@@ -11,8 +11,8 @@ Numbers={OldStyle}]{Fira Sans Light}
 \setmathsfont(Digits)[Numbers={Lining, Proportional}]{Fira Sans Light}
 \metroset{block=fill}
 
-% \input{$HOME/Documents/drive/res/latex-headers-templates/headers/bibsetup} %$
-% \bibliography{bib} % name bibfile bib.bib or change this
+% uncomment and expand this if there's a bibliography:
+% latexbib
 
 \title{$1}
 \author{$2}
