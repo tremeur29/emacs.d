@@ -36,8 +36,8 @@
 \setmainfont{TeX Gyre Pagella}
 \setmathfont(Digits){TeX Gyre Pagella Math}
 \setmathfont(Latin,Greek){TeX Gyre Pagella}
-\newfontfamily\ipatext{Doulos SIL}
-\DeclareTextFontCommand{\phontrans}{\ipatext} % wrap // and [] in \phontrans
+% \newfontfamily\ipatext{Doulos SIL}
+% \DeclareTextFontCommand{\phontrans}{\ipatext} % wrap // and [] in \phontrans
 
 % Typographic tweaks
 \usepackage{csquotes}
